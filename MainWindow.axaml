@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width="600" Height="200"
+        MinWidth="600" MinHeight="200"
+        x:Class="ColeccionCoches.MainWindow"
+        Title="ColeccionCoches">
+        <DockPanel Margin="20">
+                <Label DockPanel.Dock="Bottom" Name="StLine" Content="Coches:0 | Posicion: 0"/>
+                <DockPanel>
+                        <StackPanel DockPanel.Dock="Left">
+                                <Button HorizontalAlignment="Stretch"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="5"
+                                        Name="BtInserta" Content="Insertar">
+                                </Button>
+                                <Button HorizontalAlignment="Stretch"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="5"
+                                        Name="BtModifica" Content="Modificar">
+                                </Button>
+                                <Button HorizontalAlignment="Stretch"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="5"
+                                        Name="BtBorrar" Content="Borrar">
+                                </Button>
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Right">
+                                <DockPanel Margin="5">
+                                        <Label DockPanel.Dock="Left" Content="Modelo"/>
+                                        <TextBox DockPanel.Dock="Right" Name="EdModelo"/>
+                                </DockPanel>
+                                <DockPanel Margin="5">
+                                        <Label DockPanel.Dock="Left" Content="Color"/>
+                                        <TextBox DockPanel.Dock="Right" Name="EdColor"/>
+                                </DockPanel>
+                                <DockPanel HorizontalAlignment="Center">
+                                        <Button DockPanel.Dock="Left"
+                                                HorizontalAlignment="Stretch"
+                                                HorizontalContentAlignment="Center"
+                                                Margin="5"
+                                                Name="BtAnt" Content="Anterior">
+                                        </Button>
+                                        <Button DockPanel.Dock="Right"
+                                                HorizontalAlignment="Stretch"
+                                                HorizontalContentAlignment="Center"
+                                                Margin="5"
+                                                Name="BtSig" Content="Siguiente">
+                                        </Button>
+                                </DockPanel>        
+                        </StackPanel>
+            
+                </DockPanel>
+        </DockPanel>
+        
+</Window>
