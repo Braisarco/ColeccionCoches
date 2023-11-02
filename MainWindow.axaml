@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" 
-        Width="600" Height="200"
+        Width="1080" Height="720"
         MinWidth="600" MinHeight="200"
         x:Class="ColeccionCoches.MainWindow"
         Title="ColeccionCoches">
@@ -11,10 +11,25 @@
                 <Label DockPanel.Dock="Bottom" Name="StLine" Content="Coches:0 | Posicion: 0"/>
                 <DockPanel>
                         <StackPanel DockPanel.Dock="Left">
+                                
+                                <Label Content="Tipo de aparato"/>
+                                <ComboBox>
+                                        <ComboBoxItem>Radio</ComboBoxItem>
+                                        <ComboBoxItem>Television</ComboBoxItem>
+                                        <ComboBoxItem>Reproductor DVD</ComboBoxItem>
+                                        <ComboBoxItem>Adaptador</ComboBoxItem>
+                                </ComboBox>
+                                <Label Content="Cuantas horas ha llevado la reparacion?"/>
+                                <TextBox Name="Horas"/>
+                                <Label Content="Introduzca el numero de serie:"/>
+                                <TextBox Name="NumeroSerie"/>
+                                <Label Content="Introduzca el modelo del aparato:"/>
+                                <TextBox Name="ModeloAparato"/>
+                                
                                 <Button HorizontalAlignment="Stretch"
                                         HorizontalContentAlignment="Center"
                                         Margin="5"
-                                        Name="BtInserta" Content="Insertar">
+                                        Name="BtInserta" Content="Añadir reparacion">
                                 </Button>
                                 <Button HorizontalAlignment="Stretch"
                                         HorizontalContentAlignment="Center"
@@ -28,7 +43,12 @@
                                 </Button>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Right">
-                                <DockPanel Margin="5">
+                                <Grid>
+                                        <DataGridRowHeader Content="Modelo"/>
+                                        <DataGridRowHeader Content="Horas de la reparacion"/>
+                                        <DataGridRowHeader Content="Coste"/>
+                                </Grid>
+                                <DockPanel Margin="2">
                                         <Label DockPanel.Dock="Left" Content="Modelo"/>
                                         <TextBox DockPanel.Dock="Right" Name="EdModelo"/>
                                 </DockPanel>
